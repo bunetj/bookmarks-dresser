@@ -1,0 +1,108 @@
+/* ref/style.css — page styling + search box + search-mode formatting */
+
+* { box-sizing: border-box; }
+
+html { background: #ffffff; }
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    color: #1a1a1a;
+    background: #ffffff;
+    max-width: 60em;
+    margin: 2em auto;
+    padding: 0 1.25em;
+}
+
+h1 { font-size: 1.6em; margin: 0 0 1.2em; }
+
+h2 {
+    font-size: 1.1em;
+    margin: 1.8em 0 .4em;
+    padding-bottom: .25em;
+    border-bottom: 1px solid #d1d5db;
+}
+
+ol { padding-left: 1.8em; margin: .3em 0 .8em; }
+li { margin: .5em 0; }
+
+a { color: #0645ad; text-decoration: none; }
+a:hover { color: #0b5fff; text-decoration: underline; }
+
+.tags { color: #6b7280; }
+.accessed { color: #6b7280; font-size: .92em; }
+.total { color: #6b7280; margin-top: 2.5em; font-size: .9em; }
+
+/* ── search box ── */
+.ref-search-box {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 1em;
+}
+.ref-search-box input {
+    width: 100%;
+    padding: 10px 40px 10px 40px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-family: inherit;
+    background: #fff;
+    color: #1a1a1a;
+}
+.ref-search-box input:focus {
+    border-color: #1a73e8;
+}
+.ref-search-box .icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+.ref-search-box .clear {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+    display: none;
+}
+.ref-search-box .clear:hover { color: #222; }
+
+#refStats {
+    color: #888;
+    font-size: .88em;
+    margin: 0 0 1.2em;
+}
+
+/* ── search-mode results ── */
+#refSearchResults ol { padding-left: 1.8em; }
+#refSearchResults li { margin: .5em 0; }
+#refSearchResults .path {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
+#refSearchResults a { color: #0645ad; text-decoration: none; }
+#refSearchResults a:hover { text-decoration: underline; }
+#refSearchResults strong {
+    background: #feefc3;
+    padding: 0 2px;
+    border-radius: 2px;
+}
+#refSearchResults .tags { color: #666; }
+#refSearchResults .accessed { color: #888; font-size: .9em; }
+
+#refSearchResults .no-results {
+    text-align: center;
+    padding: 3em 1em;
+    color: #888;
+}
+#refSearchResults .no-results .big {
+    font-size: 2.5em;
+    margin-bottom: .4em;
+}
